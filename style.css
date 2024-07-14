@@ -31,7 +31,9 @@ body::-webkit-keygen-select {
 #cursor {
   height: 2vw;
   width: 2vw;
-  background-color: black;
+  background-image: url('https://plus.unsplash.com/premium_photo-1675435645225-793f8ef9f707?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNpbmdsJTIwcGVhY2UlMjBjb2ZmZWUlMjBiZWFufGVufDB8fDB8fHww');
+  background-size: cover;
+  background-position: center;
   color: #111;
   border-radius: 50%;
   position: fixed;
@@ -40,8 +42,10 @@ body::-webkit-keygen-select {
   align-items: center;
   justify-content: center;
   text-align: center;
-  z-index: 9;
+  pointer-events: none;
+  z-index: 9999;
 }
+
 
 #page1 {
   position: relative;
@@ -97,6 +101,7 @@ body::-webkit-keygen-select {
 #home-content h3 {
   color: #e5dbc9;
   font-family: web-light;
+  /* opacity: 0; */
 }
 #home-content h1 {
   font-size: 7vw;

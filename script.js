@@ -46,7 +46,7 @@ function cursormovement() {
     gsap.to(cursor, {
       x: dets.x,
       y: dets.y,
-      ease: "back.out(1.7)",
+      ease: "expoScale(0.5,7,none)",
     });
   });
 
@@ -94,24 +94,37 @@ var tl = gsap.timeline();
 function stagger() {
   tl.from(".left-navbar img", {
     y: -60,
-    opacity: 9,
-    duration: 2,
-    delay: 0.2,
+    opacity: 0,
+    duration: 1,
+    delay: 0.4,
     stagger: 0.3,
   });
   tl.from("li", {
     y: -60,
-    opacity: 9,
-    duration: 2,
-    delay: 0.2,
+    opacity: 0,
+    duration: 1,
+    delay: 0.4,
     stagger: 0.3,
   });
   tl.from(".button", {
     y: -60,
-    opacity: 9,
-    duration: 2,
-    delay: 0.2,
+    opacity: 0,
+    duration: 1,
+    delay: 0.4,
     stagger: 0.3,
+  });
+
+  tl.from("#home-content h3", {
+    opacity: 0,
+  });
+  tl.from("#home-content h1", {
+    opacity: 0,
+  });
+  tl.from("#home-content p", {
+    opacity: 0,
+  });
+  tl.from("#home-content button", {
+    opacity: 0,
   });
 }
 
