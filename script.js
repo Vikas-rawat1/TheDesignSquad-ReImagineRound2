@@ -36,7 +36,7 @@ function locomotivework() {
 
 var locoScroll = locomotivework();
 var cursor = document.querySelector("#cursor");
-var productDiv = document.querySelector(".product-images");
+var productDiv = document.querySelector(".coffee-container");
 var scrollContainer = document.querySelector("#scroll-images");
 var string = document.querySelector("#string");
 var path = "M 10 100 Q 500 100 990 100";
@@ -285,7 +285,7 @@ function scrollImages() {
 
 function page7Scroll() {
   gsap.from("#page7", {
-    y: -30,
+    y: -100,
     duration: 1.5,
     delay: 0.5,
     ease: "power2.out",

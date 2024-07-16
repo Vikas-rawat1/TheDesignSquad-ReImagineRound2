@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none;
+  /* cursor: none; */
   scrollbar-color: red;
 }
 @font-face {
@@ -167,22 +167,10 @@ video {
   z-index: 0;
 }
 
-#string {
-  background-color: #1f3133;
-  color: white;
-  display: flex;
-  justify-content: center;
-
-  /* background-color: #1f3133; */
-  /* color: white;
-    top: 14vw;
-    position: absolute;
-    display: flex;
-    justify-content: center; */
-}
-
 #page2 {
-  background-color: #1f3133;
+  /* background-color: #1f3133; */
+  background-color: #f8f2ed;
+
   color: white;
   width: 100%;
   /* height: 100%; */
@@ -231,11 +219,15 @@ video {
 #page3 {
   /* background-color: brown; */
   /* height: 100%; */
+  background-color: #f8f2ed;
   width: 100%;
 }
 #page3 h1 {
   text-align: center;
-  margin-top: 2vw;
+  display: flex;
+  justify-content: center;
+  /* margin-top: 2vw; */
+  padding: 4vw 0;
 }
 
 #coffee {
@@ -339,8 +331,6 @@ video {
   height: 4vw;
 }
 
-
-
 #page4 {
   height: 100%;
   /* width: 100%; */
@@ -433,12 +423,12 @@ video {
   margin-left: 20vw;
 }
 
-#page6 {
+/* #page6 {
   background-color: #191512;
   width: 100%;
-  /* height: 100vh; */
+  height: 100vh;
   padding: 2vw;
-}
+} */
 
 #page7 {
   /* position: relative; */
@@ -492,6 +482,7 @@ video {
   font-family: bros-light;
 }
 .about-center p span {
+  color: #6b4f27;
   font-size: 3vw;
 }
 .about-left img,
@@ -529,7 +520,6 @@ video {
   margin: auto;
   text-align: center;
   background-color: #f8f2ed;
-
 }
 #client .p1 {
   font-size: 2vw;
@@ -539,22 +529,19 @@ video {
   padding: 4vw 0;
 }
 #client .p2 {
-width: 80%;
-    font-size: 5vw;
-    margin: auto;
-    /* margin-top: 4vw; */
-    font-family: bros-light;
-    padding: 4vw 0;
+  width: 80%;
+  font-size: 5vw;
+  margin: auto;
+  /* margin-top: 4vw; */
+  font-family: bros-light;
+  padding: 4vw 0;
 }
 
 #page8 {
   width: 100%;
-  height: 60vw;
-  /* margin-top: -10vw; */
-  /* height: 100vw; */
+  height: fit-content;
   background-color: black;
   color: white;
-  /* opacity: 200; */
   padding: 2vw 2vw;
   margin: auto;
   text-align: center;
@@ -608,6 +595,7 @@ width: 80%;
 .page8-left p {
   font-family: web-light;
   font-size: 1.9vw;
+  line-height: 1.7;
   width: 25vw;
 }
 .social-logos {
@@ -619,6 +607,7 @@ width: 80%;
 }
 .page8-center {
   width: 8%;
+  font-family: web-light;
   margin-top: 5vw;
 }
 .page8-center ul {
@@ -632,6 +621,13 @@ width: 80%;
   width: 39%;
   font-size: 1.5vw;
   margin-top: 14vw;
+  font-family: web-light;
+  line-height: 1.7;
+}
+
+#string {
+  margin-top: 3vw;
+  overflow: hidden;
 }
 
 #page9 {
@@ -709,7 +705,6 @@ width: 80%;
   } */
   #page4-home button {
     margin-top: 5vw;
-    /* margin-left: 5vw; */
     width: 45%;
     /* border-radius: 1.1vw;/ */
     /* font-weight: bold; */
@@ -750,7 +745,120 @@ width: 80%;
   #page5 img {
     width: 100%;
   }
+
   #page7 {
-    height: 100vh;
+    height: fit-content;
+  }
+
+  #page7 h1 {
+    width: 100%;
+    font-size: 9vw;
+  }
+
+  #about-section {
+    display: block;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2vw;
+  }
+
+  .about-left {
+    width: 100%;
+    margin-top: 7vw;
+  }
+
+  .about-center {
+    margin-top: 4vw;
+    width: 100%;
+    font-size: 6vw;
+  }
+  .about-center p {
+    margin-top: 10vw;
+    font-size: 5.5vw;
+  }
+  .about-center p span {
+    font-size: 8vw;
+  }
+
+  .about-right {
+    width: 100%;
+    margin-top: 7vw;
+  }
+  .about-bottom {
+    height: 70vw;
+    width: 70%;
+  }
+
+  #client .p1 {
+    font-size: 6vw;
+    padding: 6vw 0;
+  }
+  #client .p2 {
+    width: 100%;
+    font-size: 8vw;
+    padding: 4vw 0;
+  }
+
+  #page8 {
+    display: flex;
+    flex-direction: column;
+  }
+  .page8-upper h1 {
+    font-size: 8vw;
+    width: 100%;
+    margin-top: 8vw;
+  }
+  #page8 button {
+    padding: 4vw 2vw;
+    width: 40vw;
+    font-size: 6vw;
+  }
+
+  #page8 button:hover {
+    padding: 4vw 2vw;
+    width: 40vw;
+    font-size: 6vw;
+  }
+
+  #page8-last {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6vw;
+  }
+  .page8-left h1 {
+    margin-top: 2vw;
+  }
+  .page8-left p {
+    font-size: 5.2vw;
+    width: 100%;
+    margin-top: 2vw;
+  }
+  .social-logos {
+    margin-top: 9vw;
+    justify-content: center;
+    gap: 10vw;
+    font-size: 7vw;
+  }
+  .page8-center {
+    width: 100%;
+    margin-top: 5vw;
+  }
+  .page8-center ul {
+    gap: 8vw;
+    font-size: 5vw;
+    width: 90%;
+    justify-content: center;
+    margin: auto;
+    margin-top: 4vw;
+  }
+
+  .page8-right {
+    width: 100%;
+    font-size: 5vw;
+    margin-top: 8vw;
+  }
+
+  #string {
+    margin-right: 1vw;
   }
 }
