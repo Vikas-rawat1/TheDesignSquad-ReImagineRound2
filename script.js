@@ -299,20 +299,21 @@ function page7Scroll() {
     },
   });
 
-  gsap.from("#page8", {
-    y: -500,
-    duration: 1.5,
-    delay: 0.5,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: "#page7",
-      scroller: "#main",
-      start: "40% 90%",
-      end: "top 60%",
-      scrub: 4,
-      markers: true,
-    },
-  });
+  // gsap.to("#page8", {
+  //   y: 0,
+  //   duration: 1.5,
+  //   delay: 0.5,
+  //   // opacity:20,
+  //   ease: "power2.out",
+  //   scrollTrigger: {
+  //     trigger: "#page7",
+  //     scroller: "#main",
+  //     start: "80% 90%",
+  //     end: "60% 30%",
+  //     scrub: 4,
+  //     markers: true,
+  //   },
+  // });
 }
 // function page8Scroll() {
 //   gsap.from("#page8", {
@@ -332,7 +333,7 @@ function page7Scroll() {
 // }
 
 sideMenuOpen();
-// cursormovement();
+cursormovement();
 strip();
 stagger();
 page2Text();
@@ -340,4 +341,4 @@ marqueWheel();
 deliverySection();
 scrollImages();
 page7Scroll();
-// page8Scroll();
+page8Scroll();
