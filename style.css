@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none;
+  /* cursor: none; */
 }
 @font-face {
   font-family: zodiak;
@@ -11,6 +11,10 @@
 @font-face {
   font-family: web-light;
   src: url("font/94be08429d6551968524.ttf");
+}
+@font-face {
+  font-family: bros-light;
+  src: url("font/HernandezBros-Light.e82af286.otf");
 }
 
 html,
@@ -92,7 +96,7 @@ body::-webkit-keygen-select {
   object-fit: contain;
   padding: 10vw 3vw;
   overflow: hidden;
-  font-family:web-light ;
+  font-family: web-light;
 }
 
 #full h4 {
@@ -166,6 +170,13 @@ video {
   color: white;
   display: flex;
   justify-content: center;
+
+  /* background-color: #1f3133; */ 
+    /* color: white;
+    top: 14vw;
+    position: absolute;
+    display: flex;
+    justify-content: center; */
 }
 
 #page2 {
@@ -232,6 +243,15 @@ video {
   overflow-x: hidden;
   padding: 3vw 0;
   margin-top: 8vw;
+  font-family: web-light;
+}
+#move2 {
+  /* background-color: #1f3133; */
+  /* color: white; */
+  display: flex;
+  overflow-x: hidden;
+  padding: 3vw 0;
+  /* margin-top: vw; */
   font-family: web-light;
 }
 .marque {
@@ -352,16 +372,19 @@ video {
   /* position: relative; */
   width: 100%;
   height: 100%;
-  padding: 2vw;
+  /* max-height: fit-content; */
+  padding: 6vw 2vw;
   background: #bdb2a7;
 }
 #page7 h1 {
   text-align: center;
   padding: 6vw;
   margin: auto;
-  font-family: web-light;
+  font-family: bros-light;
   text-transform: capitalize;
-  width: 34vw;
+  width: 47vw;
+  font-weight: 500;
+  font-size: 4vw;
 }
 
 #page7 svg {
@@ -393,6 +416,11 @@ video {
   font-size: 1.5vw;
   /* height: 100%; */
   text-align: center;
+  font-weight: 600;
+  font-family: bros-light;
+}
+.about-center p span {
+  font-size: 3vw;
 }
 .about-left img,
 .about-right img {
@@ -425,25 +453,53 @@ video {
 
 #page8 {
   width: 100%;
-  height: 100vh;
-  background-color: rgb(215, 187, 187);
+  /* margin-top: -10vw; */
+  height: 100vw;
+  background-color: rgba(245, 1, 1, 0.523);
 }
 #page9 {
   width: 100%;
   height: 100vh;
   background-color: rgb(199, 199, 243);
 }
-/* @media only screen and (max-width: 900px) {
+@media only screen and (max-width: 900px) {
+  #navbar .left-navbar img {
+    height: 15vw;
+}
+  #home-content {
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    margin-left: 1vw;
+    color: #aea699;
+    font-family: zodiak;
+    font-weight: 200;
+  }
+  .center-navbar {
+    display: none;
+  }
+  #home-content h3 {
+    /* color: #e5dbc9; */
+    /* font-family: web-light; */
+    /* opacity: 0; */
+    font-size: 6vw;
+  }
+
   #home-content h1 {
-    font-size: 2rem;
+    font-size: 11vw;
+    margin-top: 10vw;
   }
 
   #home-content p {
-    font-size: 1rem;
+    margin-left: 0;
+    font-size: 17vw;
   }
 
   #home-content button {
-    padding: 8px 16px;
+    margin-top: 6vw;
+    padding: 4vw 9vw;
     font-size: 0.9rem;
   }
   #home img {
@@ -456,35 +512,41 @@ video {
     display: flex;
     flex-direction: column-reverse;
   }
+  #page4-home p{
+    font-size: 6.3vw;
+    line-height: 9vw;
+
+  }
   #page4-home .page4-home-right {
     margin-top: 4vw;
     width: 90vw;
     text-align: center;
   }
-  #page4-home .page4-home-left h1 {
+  /* #page4-home .page4-home-left h1 {
     text-align: center;
     margin: auto;
-  }
-  #page4-home .page4-home-left p {
+  } */
+  /* #page4-home .page4-home-left p {
     text-align: center;
     margin: auto;
-  }
+    font-size: 2vw;
+  } */
   #page4-home button {
-    margin-top: 3vw;
-    margin-left: 5vw;
-    width: 32%;
-    border-radius: 1.1vw;
-    font-weight: bold;
-    padding: 1vw 1vw;
-    color: black;
-    background-color: transparent;
+    margin-top: 5vw;
+    /* margin-left: 5vw; */
+    width: 45%;
+    /* border-radius: 1.1vw;/ */
+    /* font-weight: bold; */
+    padding: 5vw 1vw;
+    font-size: 4vw;
+    /* color: black; */
+    /* background-color: transparent; */
   }
   .page4-img {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 90%;
-
   }
   .page4-img img {
     width: 100%;
@@ -495,19 +557,24 @@ video {
     width: 100%;
     overflow: hidden;
   }
-  #page5 h1 {
+  #page5 .heading {
     margin-top: 10vw;
     text-align: center;
+    font-size: 7vw;
+    width: 79%;
   }
-  #products {
+  /* #products {
     margin-top: 8vw;
     overflow: hidden;
     display: flex;
     border: 2px solid;
     rotate: 0deg;
     transform: translateX(50%);
-  }
+  } */
   #page5 img {
     width: 100%;
   }
-} */
+  #page7 {
+    height: 100vh;
+  }
+}

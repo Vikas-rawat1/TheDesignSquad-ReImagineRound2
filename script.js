@@ -281,25 +281,58 @@ function scrollImages() {
   });
 }
 
+// var parallex = gsap.timeline();
+
 function page7Scroll() {
-  gsap.to("#page7", {
-    y: -200,
+  gsap.from("#page7", {
+    y: -30,
     duration: 1.5,
     delay: 0.5,
     ease: "power2.out",
     scrollTrigger: {
       trigger: "#page7",
       scroller: "#main",
-      start: "top 0%",
+      start: "-10% 20%",
       end: "top 60%",
       scrub: 4,
       // markers: true,
     },
   });
+
+  gsap.from("#page8", {
+    y: -500,
+    duration: 1.5,
+    delay: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: "#page7",
+      scroller: "#main",
+      start: "40% 90%",
+      end: "top 60%",
+      scrub: 4,
+      markers: true,
+    },
+  });
 }
+// function page8Scroll() {
+//   gsap.from("#page8", {
+//     y: -100,
+//     duration: 1.5,
+//     delay: 0.5,
+//     ease: "power2.out",
+//     scrollTrigger: {
+//       trigger: "#page8",
+//       scroller: "#main",
+//       start: "-40% 30%",
+//       end: "top 60%",
+//       scrub: 4,
+//       markers: true,
+//     },
+//   });
+// }
 
 sideMenuOpen();
-cursormovement();
+// cursormovement();
 strip();
 stagger();
 page2Text();
@@ -307,3 +340,4 @@ marqueWheel();
 deliverySection();
 scrollImages();
 page7Scroll();
+// page8Scroll();
