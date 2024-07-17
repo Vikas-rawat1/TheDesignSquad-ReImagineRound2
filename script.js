@@ -85,8 +85,8 @@ function sideMenuOpen() {
   });
 
   sidebarMenu.from("#full h4", {
-    x: 500,
-    duration: 0.6,
+    // x: 500,
+    duration: 0.5,
     stagger: 0.3,
     opacity: 0,
   });
@@ -144,10 +144,10 @@ function stagger() {
     stagger: 0.3,
   });
   tl.from(".right-navbar", {
-    y: -60,
+    y: -5,
     opacity: 0,
-    duration: 1,
-    delay: 0.4,
+    // duration: 0.5,
+    // delay: 0.1,
     stagger: 0.3,
   });
 
