@@ -78,6 +78,59 @@ function cursormovement() {
   });
 }
 
+function loadingAnimation() {
+  var t1 = gsap.timeline();
+
+  t1.from("#line1-part1", {
+    opacity: 0,
+    onStart: function () {
+      var h5timer = document.querySelector("#line1-part1 h5");
+      var grow = 0;
+
+      setInterval(function () {
+        if (grow < 100) {
+          h5timer.innerHTML = grow++;
+        } else {
+          h5timer.innerHTML = grow;
+        }
+      }, 50);
+    },
+  });
+
+  t1.to("#loader", {
+    opacity: 0,
+    duration: 4,
+    delay: 1.8,
+  });
+  t1.from("#page1", {
+    delay: 0.1,
+    y: 1600,
+    opacity: 0,
+    duration: 0.5,
+    ease: Power4,
+  });
+  t1.to("#loader", {
+    display: "none",
+  });
+
+  t1.from(".left-navbar img,li,.right-navbar", {
+    y: -60,
+    opacity: 0,
+    // duration: 1,
+    // delay: 0.4,
+    stagger: 0.3,
+  });
+
+  t1.from(
+    "#home-content h3,#home-content h1,#home-content p,#home-content button",
+    {
+      stagger: 0.3,
+      // duration:0.5,
+      opacity: 0,
+    }
+  );
+}
+
 function sideMenuOpen() {
   sidebarMenu.to("#full", {
     right: 0,
@@ -85,6 +138,12 @@ function sideMenuOpen() {
   });
 
   sidebarMenu.from("#full h4", {
+    // x: 500,
+    duration: 0.5,
+    stagger: 0.3,
+    opacity: 0,
+  });
+  sidebarMenu.from(".full-left h3,.full-left h2", {
     // x: 500,
     duration: 0.5,
     stagger: 0.3,
@@ -126,43 +185,55 @@ function strip() {
   });
 }
 
-var tl = gsap.timeline();
-
 function stagger() {
-  tl.from(".left-navbar img", {
-    y: -60,
-    opacity: 0,
-    duration: 1,
-    delay: 0.4,
-    stagger: 0.3,
-  });
-  tl.from("li", {
-    y: -60,
-    opacity: 0,
-    duration: 1,
-    delay: 0.4,
-    stagger: 0.3,
-  });
-  tl.from(".right-navbar", {
-    y: -5,
-    opacity: 0,
-    // duration: 0.5,
-    // delay: 0.1,
-    stagger: 0.3,
-  });
+  var tl = gsap.timeline();
+  // tl.from("#page1", {
+  //   y: 1600,
+  //   opacity: 0,
+  //   duration: 1,
+  //   delay: 0.4,
+  //   stagger: 0.3,
+  // });
 
-  tl.from("#home-content h3", {
-    opacity: 0,
-  });
-  tl.from("#home-content h1", {
-    opacity: 0,
-  });
-  tl.from("#home-content p", {
-    opacity: 0,
-  });
-  tl.from("#home-content button", {
-    opacity: 0,
-  });
+  // tl.from(".left-navbar img,li,.right-navbar", {
+  //   y: -60,
+  //   // opacity: 0,
+  //   duration: 1,
+  //   delay: 0.4,
+  //   stagger: 0.3,
+  // });
+  // tl.from("li", {
+  //   y: -60,
+  //   opacity: 0,
+  //   duration: 1,
+  //   delay: 0.4,
+  //   stagger: 0.3,
+  // });
+  // tl.from(".right-navbar", {
+  //   y: -5,
+  //   opacity: 0,
+  //   // duration: 0.5,
+  //   // delay: 0.1,
+  //   stagger: 0.3,
+  // });
+
+  // tl.from(
+  //   "#home-content h3,#home-content h1,#home-content p,#home-content button",
+  //   {
+  //     stagger: 0.3,
+  //     // duration:0.5,
+  //     opacity: 0,
+  //   }
+  // );
+  // tl.from("#home-content h1", {
+  //   opacity: 0,
+  // });
+  // tl.from("#home-content p", {
+  //   opacity: 0,
+  // });
+  // tl.from("#home-content button", {
+  //   opacity: 0,
+  // });
 }
 
 var tl2 = gsap.timeline();
@@ -315,25 +386,93 @@ function page7Scroll() {
   //   },
   // });
 }
-// function page8Scroll() {
-//   gsap.from("#page8", {
-//     y: -100,
-//     duration: 1.5,
-//     delay: 0.5,
-//     ease: "power2.out",
-//     scrollTrigger: {
-//       trigger: "#page8",
-//       scroller: "#main",
-//       start: "-40% 30%",
-//       end: "top 60%",
-//       scrub: 4,
-//       markers: true,
-//     },
-//   });
-// }
+function textSplitting() {
+  var allH1 = document.querySelectorAll(".p2 h1");
+  var clutter = "";
 
+  allH1.forEach(function (elem) {
+    // console.log(elem);
+    var clutter = "";
+    var h1Text = elem.textContent;
+    h1SplittedText = h1Text.split("");
+
+    h1SplittedText.forEach(function (elem2) {
+      // console.log(elem2);
+      clutter += `<span>${elem2}</span>`;
+      // console.log(clutter);
+    });
+    elem.innerHTML = clutter;
+    // console.log(elem)
+  });
+}
+
+function textScrollingAnimation() {
+  gsap.to(".p2 h1 span ", {
+    color: "black",
+    stagger: 0.2,
+    delay: 0.2,
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".p2 h1",
+      scroller: "#main",
+      start: "top 20%",
+      end: "top -10%",
+      scrub: 2,
+      // markers: true,
+    },
+  });
+}
+
+function page8Scroll() {
+  var tl = gsap.timeline();
+
+  tl.from("#page8", {
+    y: -100,
+    duration: 1.5,
+    delay: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: "#page8",
+      scroller: "#main",
+      start: "-40% 30%",
+      end: "top 60%",
+      scrub: 4,
+      // markers: true,
+    },
+  });
+  tl.from("#page8 .page8-upper", {
+    // y: -10,
+    duration: 1.5,
+    delay: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: "#page8",
+      scroller: "#main",
+      start: "-20% 30%",
+      end: "top 60%",
+      scrub: 4,
+      // markers: true,
+    },
+  });
+  tl.from("#page8 #page8-last", {
+    y: 30,
+    duration: 1.5,
+    delay: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: "#page8",
+      scroller: "#main",
+      start: "10% 30%",
+      end: "top 60%",
+      scrub: 4,
+      // markers: true,
+    },
+  });
+}
+
+loadingAnimation();
+// cursormovement();
 sideMenuOpen();
-cursormovement();
 strip();
 stagger();
 page2Text();
@@ -341,4 +480,6 @@ marqueWheel();
 deliverySection();
 scrollImages();
 page7Scroll();
+textSplitting();
+textScrollingAnimation();
 page8Scroll();
