@@ -236,32 +236,74 @@ function stagger() {
   // });
 }
 
-var tl2 = gsap.timeline();
 function page2Text() {
-  tl2.to(".text-left", {
-    transform: "translateX(0%)",
+  var tl2 = gsap.timeline();
+
+  // Common scrollTrigger settings
+  const scrollSettings = {
+    scroller: "#main",
+    scrub: 6,
+    pin: true,
+    // markers: true, // Uncomment if needed for debugging
+  };
+
+  // Animate left-line1
+  tl2.to(".page2-left .left-line1", {
+    transform: "translateX(20%)",
     opacity: 1,
-    x: 200,
     scrollTrigger: {
-      trigger: ".text-left",
-      scroller: "#main",
-      start: "top 60%",
+      ...scrollSettings,
+      trigger: ".page2-left",
+      start: "10% 60%",
       end: "top 100%",
-      scrub: 6,
-      pin: true,
     },
   });
-  tl2.to(".text-right", {
-    transform: "translateX(-50%)",
+
+  // Animate right-line1
+  tl2.to(".page2-right .right-line1", {
+    transform: "translateX(-20%)",
     opacity: 1,
-    x: 200,
     scrollTrigger: {
-      trigger: ".text-right",
-      scroller: "#main",
-      start: "top 40%",
+      ...scrollSettings,
+      trigger: ".page2-right",
+      start: "30% 70%",
+      end: "40% 100%",
+    },
+  });
+
+  // Animate left-line2
+  tl2.to(".page2-left .left-line2", {
+    transform: "translateX(20%)",
+    opacity: 1,
+    scrollTrigger: {
+      ...scrollSettings,
+      trigger: ".page2-left",
+      start: "50% 50%",
       end: "top 100%",
-      scrub: 6,
-      pin: true,
+    },
+  });
+
+  // Animate right-line2
+  tl2.to(".right-line2", {
+    transform: "translateX(-20%)",
+    opacity: 1,
+    scrollTrigger: {
+      ...scrollSettings,
+      trigger: ".right-line2",
+      start: "70% 40%",
+      end: "20% 100%",
+    },
+  });
+
+  // Animate left-line3
+  tl2.to(".page2-left .left-line3", {
+    transform: "translateX(20%)",
+    opacity: 1,
+    scrollTrigger: {
+      ...scrollSettings,
+      trigger: ".page2-left",
+      start: "90% 50%",
+      end: "top 100%",
     },
   });
 }
@@ -470,7 +512,7 @@ function page8Scroll() {
   });
 }
 
-loadingAnimation();
+// loadingAnimation();
 // cursormovement();
 sideMenuOpen();
 strip();

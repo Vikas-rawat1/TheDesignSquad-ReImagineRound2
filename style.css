@@ -244,7 +244,7 @@ body::-webkit-keygen-select {
   border-radius: 5px;
   cursor: pointer;
 }
- video {
+video {
   position: absolute;
   top: 0;
   left: 0;
@@ -255,18 +255,76 @@ body::-webkit-keygen-select {
 }
 
 #page2 {
-  /* background-color: #1f3133; */
+  display: flex;
+  justify-content: space-between;
+  padding: 4vw 0;
+  font-family: web-light;
+  overflow: hidden;
+  font-weight: 600;
   background-color: #f8f2ed;
 
+}
+
+.page2-left {
+  width: 30%;
+  font-size: 1.5vw;
+}
+
+.page2-left .left-line1 {
+  width: 100%;
+  transform: translateX(-110%);
+}
+.page2-left .left-line2 {
+  width: 100%;
+  transform: translateX(-110%);
+  margin-top: 6vw;
+}
+.page2-left .left-line3 {
+  width: 100%;
+  transform: translateX(-110%);
+  margin-top: 10vw;
+}
+
+.page2-center {
+  width: 40%;
+}
+.page2-center img {
+  width: 100%;
+}
+
+.page2-right {
+  width: 30%;
+  font-size: 1.5vw;
+  margin-top: 5vw;
+}
+
+.page2-right .right-line1 {
+  width: 100%;
+  transform: translateX(110%);
+}
+.page2-right .right-line2 {
+  width: 100%;
+  transform: translateX(110%);
+  margin-top: 8vw;
+}
+
+
+
+
+
+/* #page2 {
+  background-color: #f8f2ed;
   color: white;
   width: 100%;
-  /* height: 100%; */
+  height: fit-content;
   overflow: hidden;
+  
 }
 #page2 .text-left {
   width: 30vw;
   margin-left: 4vw;
   transform: translateX(-110%);
+  color: black;
 }
 #page2 .text-right {
   width: 30vw;
@@ -275,9 +333,21 @@ body::-webkit-keygen-select {
   position: absolute;
   margin-top: 3vw;
   right: 0;
+  color: black;
   overflow: hidden;
 }
 
+.page2-center {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.page2-center img {
+  width: 40%;
+} */
+/* 
 #page2 .images {
   display: flex;
   justify-content: space-between;
@@ -290,7 +360,7 @@ body::-webkit-keygen-select {
 #page2 .page2-left img {
   width: 45vw;
   height: 40vw;
-}
+} */
 
 #overlay {
   /* height: 100%; */
@@ -473,7 +543,6 @@ body::-webkit-keygen-select {
   margin-top: 10vw;
   margin-bottom: 4vw;
   font-family: web-light;
-
 }
 
 #scroll-images {
@@ -904,7 +973,7 @@ body::-webkit-keygen-select {
     font-size: 6vw;
     padding: 6vw 0;
   }
-  #client .p2  {
+  #client .p2 {
     width: 100%;
     font-size: 8vw;
     padding: 4vw 0;
