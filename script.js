@@ -113,6 +113,13 @@ function loadingAnimation() {
     display: "none",
   });
 
+  t1.from("#page1 video", {
+    y:20,
+    stagger:0.3,
+    duration:0.5,
+    scale:0.2,
+    opacity:0,
+  });
   t1.from(".left-navbar img,li,.right-navbar", {
     y: -60,
     opacity: 0,
@@ -185,56 +192,7 @@ function strip() {
   });
 }
 
-function stagger() {
-  var tl = gsap.timeline();
-  // tl.from("#page1", {
-  //   y: 1600,
-  //   opacity: 0,
-  //   duration: 1,
-  //   delay: 0.4,
-  //   stagger: 0.3,
-  // });
 
-  // tl.from(".left-navbar img,li,.right-navbar", {
-  //   y: -60,
-  //   // opacity: 0,
-  //   duration: 1,
-  //   delay: 0.4,
-  //   stagger: 0.3,
-  // });
-  // tl.from("li", {
-  //   y: -60,
-  //   opacity: 0,
-  //   duration: 1,
-  //   delay: 0.4,
-  //   stagger: 0.3,
-  // });
-  // tl.from(".right-navbar", {
-  //   y: -5,
-  //   opacity: 0,
-  //   // duration: 0.5,
-  //   // delay: 0.1,
-  //   stagger: 0.3,
-  // });
-
-  // tl.from(
-  //   "#home-content h3,#home-content h1,#home-content p,#home-content button",
-  //   {
-  //     stagger: 0.3,
-  //     // duration:0.5,
-  //     opacity: 0,
-  //   }
-  // );
-  // tl.from("#home-content h1", {
-  //   opacity: 0,
-  // });
-  // tl.from("#home-content p", {
-  //   opacity: 0,
-  // });
-  // tl.from("#home-content button", {
-  //   opacity: 0,
-  // });
-}
 
 function page2Text() {
   var tl2 = gsap.timeline();
@@ -303,6 +261,28 @@ function page2Text() {
       ...scrollSettings,
       trigger: ".page2-left",
       start: "90% 50%",
+      end: "top 100%",
+    },
+  });
+  // Animate right-line3
+
+  tl2.to(".page2-right .right-line3", {
+    transform: "translateX(20%)",
+    opacity: 1,
+    scrollTrigger: {
+      ...scrollSettings,
+      trigger: ".page2-right",
+      start: "90% 40%",
+      end: "top 100%",
+    },
+  });
+  tl2.to(".page2-center .mobile-button", {
+    transform: "translateX(20%)",
+    opacity: 1,
+    scrollTrigger: {
+      ...scrollSettings,
+      trigger: ".page2-center",
+      start: "40% 40%",
       end: "top 100%",
     },
   });
@@ -515,13 +495,12 @@ function page8Scroll() {
 // loadingAnimation();
 // cursormovement();
 sideMenuOpen();
-strip();
-stagger();
+// strip();
 page2Text();
-marqueWheel();
-deliverySection();
-scrollImages();
-page7Scroll();
-textSplitting();
-textScrollingAnimation();
-page8Scroll();
+// marqueWheel();
+// deliverySection();
+// scrollImages();
+// page7Scroll();
+// textSplitting();
+// textScrollingAnimation();
+// page8Scroll();
