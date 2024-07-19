@@ -159,7 +159,7 @@ body::-webkit-keygen-select {
 #navbar .center-navbar ul li {
   font-family: web-light;
   font-weight: 900;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .right-navbar i {
@@ -533,6 +533,14 @@ video {
   padding: 1vw 1vw;
   text-transform: uppercase;
   background-color: transparent;
+  background-color: #c8935f;
+  color: white;
+  font: bold;
+  border: none;
+}
+#page4-home button:hover {
+
+  background-color: #e7b380;
 }
 .page4-right {
   position: absolute;
@@ -955,6 +963,7 @@ video {
     margin-top: 4vw;
     width: 90vw;
     text-align: center;
+    background-color: #c8935f;
   }
 
   #page4-home button {
