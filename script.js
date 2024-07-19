@@ -48,6 +48,16 @@ var menu = document.querySelector(".right-navbar i");
 var close = document.querySelector("#full i");
 var sidebarMenu = gsap.timeline();
 
+function MagnetEffect() {
+  Shery.makeMagnet(
+    ".line p,.line-bottom,.line img,.center-navbar ul li,.page2-center img,.coffee-img-wrapper img"
+  );
+  Shery.imageMasker(".page2-center img", {
+    mouseFollower: true,
+    text: "Quality Assurance",
+  });
+}
+
 function cursormovement() {
   window.addEventListener("mousemove", function (dets) {
     gsap.to(cursor, {
@@ -62,7 +72,7 @@ function cursormovement() {
     gsap.to(cursor, {
       x: dets.x,
       y: dets.y,
-      scale: 5,
+      scale: 3,
       ease: "back.out(1.7)",
       backgroundColor: "#ffffff8a",
     });
@@ -93,13 +103,13 @@ function loadingAnimation() {
         } else {
           h5timer.innerHTML = grow;
         }
-      }, 50);
+      }, 80);
     },
   });
 
   t1.to("#loader", {
-    opacity: 0,
-    duration: 4,
+    // opacity: 0,
+    duration: 5.1,
     delay: 1.8,
   });
   t1.from("#page1", {
@@ -114,11 +124,11 @@ function loadingAnimation() {
   });
 
   t1.from("#page1 video", {
-    y:20,
-    stagger:0.3,
-    duration:0.5,
-    scale:0.2,
-    opacity:0,
+    y: 20,
+    stagger: 0.3,
+    duration: 0.5,
+    scale: 0.2,
+    opacity: 0,
   });
   t1.from(".left-navbar img,li,.right-navbar", {
     y: -60,
@@ -191,8 +201,6 @@ function strip() {
     });
   });
 }
-
-
 
 function page2Text() {
   var tl2 = gsap.timeline();
@@ -374,7 +382,6 @@ function scrollImages() {
   });
 }
 
-// var parallex = gsap.timeline();
 
 function page7Scroll() {
   gsap.from("#page7", {
@@ -492,15 +499,16 @@ function page8Scroll() {
   });
 }
 
-// loadingAnimation();
-// cursormovement();
+loadingAnimation();
+MagnetEffect();
+cursormovement();
 sideMenuOpen();
-// strip();
+strip();
 page2Text();
-// marqueWheel();
-// deliverySection();
-// scrollImages();
-// page7Scroll();
-// textSplitting();
-// textScrollingAnimation();
-// page8Scroll();
+marqueWheel();
+deliverySection();
+scrollImages();
+page7Scroll();
+textSplitting();
+textScrollingAnimation();
+page8Scroll();
