@@ -247,15 +247,15 @@ body::-webkit-keygen-select {
 #home-content button {
   padding: 10px 20px;
   font-size: 1rem;
-  background-color: #6b4f27;
+  background-color: #c8935f;
   text-transform: uppercase;
   border: none;
   color: white;
   border-radius: 5px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 #home-content button:hover {
-  background-color: #7b603b;
+  background-color: #a48355;
 }
 video {
   position: absolute;
@@ -402,7 +402,7 @@ video {
   display: flex;
   width: 100%;
   margin: auto;
-  padding: 4vw 0;
+  /* padding: 4vw 0; */
   justify-content: center;
   background-color: #f8f3e8;
 }
@@ -452,7 +452,7 @@ video {
   color: #fff;
   border: none;
   border-radius: 20px;
-  cursor: pointer;
+  /* cursor: pointer; */
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -687,6 +687,8 @@ video {
   text-align: center;
   background-color: #f8f2ed;
 }
+
+
 #client .p1 {
   font-size: 2vw;
   font-family: web-light;

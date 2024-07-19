@@ -41,11 +41,13 @@ var scrollContainer = document.querySelector("#scroll-images");
 var string = document.querySelector("#string");
 var path = "M 10 100 Q 500 100 990 100";
 var finalPath = "M 10 100 Q 500 100 990 100";
-
+var centerImg = document.querySelector(".page2-center img");
+var page8 = document.querySelector("#page8");
 var mainImg = document.querySelector(".home-right img");
 
 var menu = document.querySelector(".right-navbar i");
 var close = document.querySelector("#full i");
+
 var sidebarMenu = gsap.timeline();
 
 function MagnetEffect() {
@@ -85,6 +87,19 @@ function cursormovement() {
       scale: 1,
       backgroundColor: "#000",
     });
+  });
+
+  centerImg.addEventListener("mouseenter", function () {
+    cursor.style.backgroundColor = "transparent";
+  });
+  centerImg.addEventListener("mouseleave", function () {
+    cursor.style.backgroundColor = "#000";
+  });
+  page8.addEventListener("mouseenter", function () {
+    cursor.style.backgroundColor = "#fff";
+  });
+  page8.addEventListener("mouseleave", function () {
+    cursor.style.backgroundColor = "#000";
   });
 }
 
@@ -210,6 +225,7 @@ function page2Text() {
     scroller: "#main",
     scrub: 6,
     pin: true,
+    // yoyo:true,
     // markers: true, // Uncomment if needed for debugging
   };
 
@@ -381,7 +397,6 @@ function scrollImages() {
     });
   });
 }
-
 
 function page7Scroll() {
   gsap.from("#page7", {
